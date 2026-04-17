@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+
+    <!-- ✅ FastAPI CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<!-- 🔥 3D Animated Background -->
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- 🚀 MAIN CONTAINER -->
+<div class="container">
+
+    <!-- 💎 LEFT: FORM -->
+    <div class="card">
+        <h2>Create / Update User</h2>
+
+        <!-- Hidden ID (for edit) -->
+        <input type="hidden" id="userId">
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="number" id="age" placeholder="Enter Age" required>
+
+        <button onclick="saveUser()">Save</button>
+
+        <div id="msg"></div>
+    </div>
+
+    <!-- 📊 RIGHT: USERS TABLE -->
+    <div class="table-card">
+        <h2>Users List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- ✅ FastAPI JS -->
+<script src="/script.js"></script>
+
+</body>
+</html>
